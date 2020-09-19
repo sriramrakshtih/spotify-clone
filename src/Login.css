@@ -8,6 +8,10 @@
 .login > img {
     width: 100%;
 }
+.login > h1 {
+    color: white;
+    padding: 20px;
+}
 
 .login > a {
     padding: 20px;
