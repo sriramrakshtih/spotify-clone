@@ -11,14 +11,18 @@ import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 import { Slider, Grid } from '@material-ui/core';
 
 
-function Footer() {
+function Footer({ spotify }) {
+
+    
+
+
     return (
         <div className="footer">
             <div className="footer__left">
                 <img className="footer__albumLogo" src="https://static1.squarespace.com/static/56454c01e4b0177ad4141742/56f3eeaa6e06f2df013dd6cd/56f3ef166e06f2df013de90c/1458827030375/Covers-Vol.-1-Cover.jpg?format=original" alt="" />
                 <div className="footer__songInfo">
-                    <h4>yeah</h4>
-                    <p>sure..playing</p>
+                    <h4>Song Name</h4>
+                    <p>Song Playing</p>
                 </div>
                 
             </div>
