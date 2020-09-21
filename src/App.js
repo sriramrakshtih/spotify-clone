@@ -34,6 +34,33 @@ function App() {
           user: user,
         });
       });
+
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
+
+      spotify.getPlaylist("37i9dQZEVXcJ5BuVucyUHW").then((response) =>
+      dispatch({
+        type: "SET_DISCOVER_WEEKLY",
+        discover_weekly: response,
+      })
+    );
+
+      spotify.getMyTopArtists().then((response) =>
+      dispatch({
+        type: "SET_TOP_ARTISTS",
+        top_artists: response,
+      })
+    );
+
+    dispatch({
+      type: "SET_SPOTIFY",
+      spotify: spotify,
+    });
+
     }
 
   }, []);
